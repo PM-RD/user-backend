@@ -6,7 +6,7 @@ package com.unity.server.entity;
 public class User {
 
     private int id;
-    private String account;
+    private String name;
     private String password;
 
     public int getId() {
@@ -17,12 +17,12 @@ public class User {
         this.id = id;
     }
 
-    public String getAccount() {
-        return account;
+    public String getName() {
+        return name;
     }
 
-    public void setAccount(String account) {
-        this.account = account;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getPassword() {

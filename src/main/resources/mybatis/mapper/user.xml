@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.neo.mapper.UserMapper" >
+<mapper namespace="com.unity.server.dao.UserDao" >
     <resultMap id="UserMap" type="com.unity.server.entity.User" >
         <id column="id" property="id" />
-        <result column="name" property="userName" />
-        <result column="password" property="passWord"/>
+        <result column="name" property="name" />
+        <result column="password" property="password"/>
 
     </resultMap>
 
@@ -21,7 +21,7 @@
     <select id="queryById" parameterType="java.lang.Integer" resultMap="UserMap" >
         SELECT
         <include refid="Base_Column_List" />
-        FROM users
+        FROM user
         WHERE id = #{id}
     </select>
 
