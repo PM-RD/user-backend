@@ -19,7 +19,12 @@ public class HelloController {
 
     @RequestMapping("/hello")
     public String say(){
-        User user = userDao.queryById(1);
-        return "Hello World,"+user.getName();
+        User user = new User();
+        user.setPassword("321");
+        user.setUserName("kky");
+        userDao.insert(user);
+        return "Hello World,"+user.getId();
     }
+
+
 }

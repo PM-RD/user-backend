@@ -3,13 +3,13 @@
 <mapper namespace="com.unity.server.dao.UserDao" >
     <resultMap id="UserMap" type="com.unity.server.entity.User" >
         <id column="id" property="id" />
-        <result column="name" property="name" />
+        <result column="userName" property="userName" />
         <result column="password" property="password"/>
 
     </resultMap>
 
     <sql id="Base_Column_List" >
-        id, name, password
+        id, userName, password
     </sql>
 
     <!--<select id="getAll" resultMap="BaseResultMap"  >-->
@@ -25,13 +25,13 @@
         WHERE id = #{id}
     </select>
 
-    <!--<insert id="insert" parameterType="com.neo.entity.UserEntity" >-->
-        <!--INSERT INTO-->
-        <!--users-->
-        <!--(userName,passWord,user_sex)-->
-        <!--VALUES-->
-        <!--(#{userName}, #{passWord}, #{userSex})-->
-    <!--</insert>-->
+    <insert id="insert" parameterType="com.unity.server.entity.User" >
+        INSERT INTO
+        user
+        (userName,password)
+        VALUES
+        (#{userName}, #{password})
+    </insert>
 
     <!--<update id="update" parameterType="com.neo.entity.UserEntity" >-->
         <!--UPDATE-->

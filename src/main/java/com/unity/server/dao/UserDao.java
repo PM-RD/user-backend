@@ -8,4 +8,6 @@ import com.unity.server.entity.User;
 public interface UserDao {
 
     User queryById(int id);
+
+    void insert(User user);
 }
