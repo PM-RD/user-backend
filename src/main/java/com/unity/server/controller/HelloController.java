@@ -22,8 +22,8 @@ public class HelloController {
         User user = new User();
         user.setPassword("321");
         user.setUserName("kky");
-        userDao.insert(user);
-        return "Hello World,"+user.getId();
+        int id= userDao.insert(user);
+        return "Hello World,"+id;
     }
 
 

@@ -9,5 +9,5 @@ public interface UserDao {
 
     User queryById(int id);
 
-    void insert(User user);
+    int insert(User user);
 }
